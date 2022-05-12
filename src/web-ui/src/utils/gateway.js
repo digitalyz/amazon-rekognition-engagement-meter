@@ -39,6 +39,8 @@ const gateway = {
       Heureux: normalize("happy"),
       Triste: normalize("sad"),
       Surpris: normalize("surprised"),
+      Crainte: normalize("fear"),
+      Confusion: normalize("confused"),
     });
   },
 
