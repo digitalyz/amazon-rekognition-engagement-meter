@@ -41,13 +41,13 @@ const EngagementsSummary = ({
               width: webcamCoordinates.width * face.boundingBox.Width,
             }}
           >
-            Person #{index + 1}
+            Personne #{index + 1}
           </div>
         )}
         <Table responsive>
           <thead>
             <tr>
-              <th>Person #{index + 1}</th>
+              <th>Personne #{index + 1}</th>
               <th />
             </tr>
           </thead>
