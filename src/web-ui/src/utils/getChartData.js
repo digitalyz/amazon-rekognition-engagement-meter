@@ -30,11 +30,11 @@ const getChartData = (data) => {
     );
 
     output.aggregate = {
-      angry: Math.floor((totals.angry / totals.total) * 100),
-      calm: Math.floor((totals.calm / totals.total) * 100),
-      happy: Math.floor((totals.happy / totals.total) * 100),
-      sad: Math.floor((totals.sad / totals.total) * 100),
-      surprised: Math.floor((totals.surprised / totals.total) * 100),
+      colère: Math.floor((totals.angry / totals.total) * 100),
+      calme: Math.floor((totals.calm / totals.total) * 100),
+      heureux: Math.floor((totals.happy / totals.total) * 100),
+      triste: Math.floor((totals.sad / totals.total) * 100),
+      surpris: Math.floor((totals.surprised / totals.total) * 100),
     };
   }
   return output;
