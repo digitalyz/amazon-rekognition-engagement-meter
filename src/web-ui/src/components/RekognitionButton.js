@@ -13,7 +13,7 @@ const RekognitionButton = (props) => {
       }}
       disabled={!props.enabled}
     >
-      {started ? "Stop" : "Start"} Rekognition
+      {started ? "Arréter" : "Démarrer"} Reconnaissance
     </Button>
   );
 };
