@@ -17,7 +17,7 @@ const Header = (props) => (
           href="https://digitalyz.fr"
           target="_blank"
         >
-          Retrouvez nous sur 
+          Retrouvez-nous sur Digitalyz
         </NavItem>
       </Nav>
       <Nav pullRight style={{ paddingTop: "8px" }}>
