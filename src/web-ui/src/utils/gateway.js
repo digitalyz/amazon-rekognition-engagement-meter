@@ -35,7 +35,7 @@ const gateway = {
     return request(`/engagement`, "post", {
       timeDetected: new Date().getTime(),
       angry: normalize("Colère"),
-      calm: normalize("Calm"),
+      calm: normalize("Calme"),
       happy: normalize("Heureux"),
       sad: normalize("Triste"),
       surprised: normalize("Surpris"),
