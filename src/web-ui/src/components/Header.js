@@ -7,17 +7,17 @@ import RekognitionButton from "./RekognitionButton";
 const Header = (props) => (
   <Navbar inverse collapseOnSelect style={{ backgroundColor: "#000" }}>
     <Navbar.Header>
-      <Navbar.Brand>Amazon Rekognition Engagement Meter</Navbar.Brand>
+      <Navbar.Brand>Digitalyz Engagement Metre</Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>
         <NavItem
           eventKey={1}
-          href="https://github.com/aws-samples/amazon-rekognition-engagement-meter"
+          href="https://digitalyz.fr"
           target="_blank"
         >
-          Fork me in github
+          Retrouvez nous sur 
         </NavItem>
       </Nav>
       <Nav pullRight style={{ paddingTop: "8px" }}>
