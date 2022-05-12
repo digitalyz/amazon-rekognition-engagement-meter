@@ -34,11 +34,11 @@ const gateway = {
 
     return request(`/engagement`, "post", {
       timeDetected: new Date().getTime(),
-      angry: normalize("ANGRY"),
-      calm: normalize("CALM"),
-      happy: normalize("HAPPY"),
-      sad: normalize("SAD"),
-      surprised: normalize("SURPRISED"),
+      angry: normalize("Colère"),
+      calm: normalize("Calm"),
+      happy: normalize("Heureux"),
+      sad: normalize("Triste"),
+      surprised: normalize("Surpris"),
     });
   },
 
