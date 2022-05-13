@@ -36,7 +36,7 @@ const gateway = {
       timeDetected: new Date().getTime(),
       angry: normalize("Colère"),
       calm: normalize("Calme"),
-      happy: normalize("Heureux"),
+      Heureux: normalize("Heureux"),
       Triste: normalize("Triste"),
       surprised: normalize("Surpris"),
       fear: normalize("Crainte"),
