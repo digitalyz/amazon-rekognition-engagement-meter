@@ -126,8 +126,8 @@ const App = () => {
                     ref={setupWebcam}
                     screenshotFormat="image/jpeg"
                     videoConstraints={{
-                      width: 1280,
-                      height: 640,
+                      width: 1920,
+                      height: 980,
                       facingMode: "user",
                     }}
                     width="100%"
