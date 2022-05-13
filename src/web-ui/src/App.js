@@ -108,7 +108,7 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className="App" style="background-color:#F6296">
       <Header
         toggleRekognition={toggleRekognition}
         addUser={addUser}
