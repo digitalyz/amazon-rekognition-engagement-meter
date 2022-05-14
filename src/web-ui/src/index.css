@@ -11,3 +11,10 @@ body {
   font-size: 11px;
   text-align: center;
 }
+
+.bigtext {
+  font-size: 24px;
+}
+.textemotion {
+  font-size: 20px;
+}

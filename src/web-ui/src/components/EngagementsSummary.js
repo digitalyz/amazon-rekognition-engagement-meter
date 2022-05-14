@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import {Col, Row, Table} from "react-bootstrap";
 
 const filterAndSortEmotions = (face) =>
   Object.keys(face.emotions)
@@ -22,9 +22,9 @@ const EngagementsSummary = ({
   showFaceBoundingBoxes,
   webcamCoordinates,
 }) => (
-  <div>
+  <Row>
     {detectedFaces.map((face, index) => (
-      <div key={index}>
+      <Col md={4} key={index}>
         {showFaceBoundingBoxes && (
           <div
             style={{
@@ -44,36 +44,36 @@ const EngagementsSummary = ({
             Personne #{index + 1}
           </div>
         )}
-        <Table responsive>
+        <Table responsive style={{fontsize: "20px"}}>
           <thead>
             <tr>
-              <th>Personne #{index + 1}</th>
+              <th className={"bigtext"}>Personne #{index + 1}</th>
               <th />
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Age</td>
-              <td>
+              <td className={"textemotion"}>Age</td>
+              <td className={"textemotion"}>
                 {face.ageLow} - {face.ageHigh} years old
               </td>
             </tr>
             {filterAndSortEmotions(face).map(({ emotion, confidence }) => (
               <tr key={emotion}>
-                <td>{emotion}</td>
-                <td>{confidence}%</td>
+                <td className={"textemotion"}>{emotion}</td>
+                <td className={"textemotion"}>{confidence}%</td>
               </tr>
             ))}
           </tbody>
         </Table>
-      </div>
+      </Col>
     ))}
     {detectedPeople.map((person) => (
       <p key={person.externalImageId}>
         Welcome <b>{person.memberName}</b> ({person.jobTitle})
       </p>
     ))}
-  </div>
+  </Row>
 );
 
 export default EngagementsSummary;

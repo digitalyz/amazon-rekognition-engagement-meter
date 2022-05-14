@@ -108,7 +108,7 @@ const App = () => {
   };
 
   return (
-    <div className="App" style="background-color:#F6296">
+    <div className="App" style={{backgroundColor:"#F6296"}}>
       <Header
         toggleRekognition={toggleRekognition}
         addUser={addUser}
@@ -121,7 +121,11 @@ const App = () => {
           <Col md={12} sm={6}>
             <Grid>
               <Row>
-                <Col md={8} sm={6}>
+                <Col md={12}>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={12} sm={6}>
                   <Webcam
                     ref={setupWebcam}
                     screenshotFormat="image/jpeg"
@@ -133,33 +137,33 @@ const App = () => {
                     width="100%"
                     height="100%"
                   />
-                  <Grid>
-                    <Row style={{ marginTop: "20px" }}>
-                      <Col md={4} sm={3}>
-                        <h3>Tendance de la dernière heure</h3>
-                        <PolarChart
-                          data={Object.keys(aggregate).map((sentiment) => ({
-                            x: sentiment,
-                            y: aggregate[sentiment],
-                          }))}
-                        />
-                      </Col>
-                      <Col md={4} sm={3}>
-                        <h3 style={{ marginBottom: "40px" }}>
-                          Engagement Mètre
-                        </h3>
-                        <GaugeChart
-                          id="gauge-chart1"
-                          percent={happyometer / 100}
-                          nrOfLevels={20}
-                          colors={["#FF5F6D", "#FFC371"]}
-                          animate={false}
-                        />
-                      </Col>
-                    </Row>
-                  </Grid>
+                  {/*<Grid>*/}
+                  {/*  <Row style={{ marginTop: "20px" }}>*/}
+                  {/*    <Col md={4} sm={3}>*/}
+                  {/*      <h3>Tendance de la dernière heure</h3>*/}
+                  {/*      <PolarChart*/}
+                  {/*        data={Object.keys(aggregate).map((sentiment) => ({*/}
+                  {/*          x: sentiment,*/}
+                  {/*          y: aggregate[sentiment],*/}
+                  {/*        }))}*/}
+                  {/*      />*/}
+                  {/*    </Col>*/}
+                  {/*    <Col md={4} sm={3}>*/}
+                  {/*      <h3 style={{ marginBottom: "40px" }}>*/}
+                  {/*        Engagement Mètre*/}
+                  {/*      </h3>*/}
+                  {/*      <GaugeChart*/}
+                  {/*        id="gauge-chart1"*/}
+                  {/*        percent={happyometer / 100}*/}
+                  {/*        nrOfLevels={20}*/}
+                  {/*        colors={["#FF5F6D", "#FFC371"]}*/}
+                  {/*        animate={false}*/}
+                  {/*      />*/}
+                  {/*    </Col>*/}
+                  {/*  </Row>*/}
+                  {/*</Grid>*/}
                 </Col>
-                <Col md={4} sm={6}>
+                <Col md={12} sm={6}>
                   <EngagementSummary
                     detectedFaces={detectedFaces}
                     detectedPeople={detectedPeople}
