@@ -115,68 +115,68 @@ const App = () => {
         readyToStream={readyToStream}
       />
       <Grid>
-        <SettingsHelp show={!window.rekognitionSettings} />
-        <CameraHelp show={!readyToStream} />
-        <Row>
-          <Col md={12} sm={6}>
-            <Grid>
-              <Row>
-                <Col md={12}>
-                  <h2 className={"textTitre1"}>L'Intelligence Artificielle est-elle réellement intelligente ?</h2>
-                  <h1 className={"textTitre2"}>Approchez-vous ! Testez l'Engagement Mètre</h1>
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12} sm={6}>
-                  <Webcam
-                    ref={setupWebcam}
-                    screenshotFormat="image/jpeg"
-                    videoConstraints={{
-                      width: 1920,
-                      height: 980,
-                      facingMode: "user",
-                    }}
-                    width="100%"
-                    height="100%"
-                  />
-                  {/*<Grid>*/}
-                  {/*  <Row style={{ marginTop: "20px" }}>*/}
-                  {/*    <Col md={4} sm={3}>*/}
-                  {/*      <h3>Tendance de la dernière heure</h3>*/}
-                  {/*      <PolarChart*/}
-                  {/*        data={Object.keys(aggregate).map((sentiment) => ({*/}
-                  {/*          x: sentiment,*/}
-                  {/*          y: aggregate[sentiment],*/}
-                  {/*        }))}*/}
-                  {/*      />*/}
-                  {/*    </Col>*/}
-                  {/*    <Col md={4} sm={3}>*/}
-                  {/*      <h3 style={{ marginBottom: "40px" }}>*/}
-                  {/*        Engagement Mètre*/}
-                  {/*      </h3>*/}
-                  {/*      <GaugeChart*/}
-                  {/*        id="gauge-chart1"*/}
-                  {/*        percent={happyometer / 100}*/}
-                  {/*        nrOfLevels={20}*/}
-                  {/*        colors={["#FF5F6D", "#FFC371"]}*/}
-                  {/*        animate={false}*/}
-                  {/*      />*/}
-                  {/*    </Col>*/}
-                  {/*  </Row>*/}
-                  {/*</Grid>*/}
-                </Col>
-                <Col md={12} sm={6}>
-                  <EngagementSummary
-                    detectedFaces={detectedFaces}
-                    detectedPeople={detectedPeople}
-                    showFaceBoundingBoxes={iterating.current}
-                    webcamCoordinates={webcamCoordinates}
-                  />
-                </Col>
-              </Row>
-            </Grid>
-          </Col>
-        </Row>
+        <div><SettingsHelp show={!window.rekognitionSettings}/>
+          <CameraHelp show={!readyToStream}/>
+          <Row>
+            <Col md={12} sm={6}>
+              <Grid>
+                <Row>
+                  <Col md={12}>
+                    <h2 className={"textTitre1"}>L'Intelligence Artificielle est-elle réellement intelligente ?</h2>
+                    <h1 className={"textTitre2"}>Approchez-vous ! Testez l'Engagement Mètre</h1>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md={10} sm={6}>
+                    <Webcam
+                      ref={setupWebcam}
+                      screenshotFormat="image/jpeg"
+                      videoConstraints={{
+                        width: 1920,
+                        height: 980,
+                        facingMode: "user",
+                      }}
+                      width="100%"
+                      height="100%"
+                    />
+                  </Col>
+                  <Col md={2}>
+                    {/*<Row style={{ marginTop: "20px" }}>*/}
+                    {/*  <Col md={4} sm={3}>*/}
+                    <h3 className={"text-center alignCenter"}>Tendance de la dernière heure</h3>
+                    <PolarChart
+                      data={Object.keys(aggregate).map((sentiment) => ({
+                        x: sentiment,
+                        y: aggregate[sentiment],
+                      }))}
+                    />
+                    {/*</Col>*/}
+                    {/*<Col md={4} sm={3}>*/}
+                    {/*<h3 className={"text-center"} style={{ marginBottom: "40px" }}>*/}
+                    {/*  Engagement Mètre*/}
+                    {/*</h3>*/}
+                    {/*<GaugeChart*/}
+                    {/*  id="gauge-chart1"*/}
+                    {/*  percent={happyometer / 100}*/}
+                    {/*  nrOfLevels={20}*/}
+                    {/*  colors={["#FF5F6D", "#FFC371"]}*/}
+                    {/*  animate={false}*/}
+                    {/*/>*/}
+                    {/*  </Col>*/}
+                    {/*</Row>*/}
+                  </Col>
+                  <Col md={12} sm={6}>
+                    <EngagementSummary
+                      detectedFaces={detectedFaces}
+                      detectedPeople={detectedPeople}
+                      showFaceBoundingBoxes={iterating.current}
+                      webcamCoordinates={webcamCoordinates}
+                    />
+                  </Col>
+                </Row>
+              </Grid>
+            </Col>
+          </Row></div>
       </Grid>
     </div>
   );

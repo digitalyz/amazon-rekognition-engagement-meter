@@ -5,7 +5,7 @@ const getChartData = (data) => {
   };
 
   const totals = {
-    Colère: 0,
+    angry: 0,
     calm: 0,
     happy: 0,
     sad: 0,
