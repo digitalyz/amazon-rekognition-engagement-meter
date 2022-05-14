@@ -122,6 +122,8 @@ const App = () => {
             <Grid>
               <Row>
                 <Col md={12}>
+                  <h2 className={"textTitre1"}>L'Intelligence Artificielle est-elle réellement intelligente ?</h2>
+                  <h1 className={"textTitre2"}>Approchez-vous ! Testez l'Engagement Mètre</h1>
                 </Col>
               </Row>
               <Row>
