@@ -16,6 +16,31 @@ const filterAndSortEmotions = (face) =>
       } else return 0;
     });
 
+const displayEmotion = (emotion) => {
+
+  switch( emotion ) {
+    case 'ANGRY' :
+      return "😠 Colère"
+    case 'CALM' :
+      return "😎 Calme"
+    case 'CONFUSED' :
+      return "🤨 Confus"
+    case 'DIGUSTED' :
+      return "🤮 Dégoût"
+    case 'FEAR' :
+      return "😱 Peur"
+    case 'HAPPY' :
+      return "😀 Joyeux"
+    case 'SAD' :
+      return "🥺 Tristesse"
+    case 'SURPRISED' :
+      return "😮 Surprise"
+    default:
+      return "Non identifié"
+  }
+
+}
+
 const EngagementsSummary = ({
   detectedFaces,
   detectedPeople,
@@ -55,12 +80,12 @@ const EngagementsSummary = ({
             <tr>
               <td className={"textemotion"}>Age</td>
               <td className={"textemotion"}>
-                {face.ageLow} - {face.ageHigh} years old
+                {face.ageLow} - {face.ageHigh} ans
               </td>
             </tr>
             {filterAndSortEmotions(face).map(({ emotion, confidence }) => (
               <tr key={emotion}>
-                <td className={"textemotion"}>{emotion}</td>
+                <td className={"textemotion"}>{displayEmotion(emotion)}</td>
                 <td className={"textemotion"}>{confidence}%</td>
               </tr>
             ))}

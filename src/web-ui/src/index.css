@@ -13,10 +13,14 @@ body {
 }
 
 .bigtext {
-  font-size: 24px;
+  font-size: 28px;
+  text-align: center;
+}
+.smiley {
+  font-size: 35px;
 }
 .textemotion {
-  font-size: 20px;
+  font-size: 25px;
 }
 .textTitre1 {
   font-size: 40px;
